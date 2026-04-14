@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+.login-card {
+    width: 400px; /* Atur lebar card sesuai keinginan */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+.daftar-card {
+    width: 400px; /* Ubah lebar card sesuai keinginan */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+.card-header {
+    background-color: #F195B2; /* Laravel Red */
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: center;
+}
+.card-body {
+    padding: 2rem;
+}
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+.btn-primary {
+    border-radius: 8px;
+    background-color: #F195B2; /* Laravel Red */
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #F195B2; /* Darker Laravel Red */
+}
+.card-footer {
+    background-color: transparent;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.small-text {
+    color: #6c757d;
+}
+a {
+    color: #F195B2; /* Laravel Red */
+    text-decoration: none;
+}
+a:hover {
+    color: #F195B2; /* Darker Laravel Red */
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
