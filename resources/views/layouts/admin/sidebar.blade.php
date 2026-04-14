@@ -28,7 +28,7 @@
                     <span class="sidebar-text">Dashboard</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('pelanggan*') ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ request()->is('pelanggan*') ? 'active' : '' }}">
                 <a href="{{ route('pelanggan.list') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <img src="{{ asset('assets-admin/assets/img/icon-pelanggan.png') }}" height="23"
@@ -36,9 +36,9 @@
                     </span>
                     <span class="sidebar-text">Pelanggan</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- Sidebar Data Mitra --}}
-            <li class="nav-item {{ request()->is('mitra*') ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ request()->is('mitra*') ? 'active' : '' }}">
                 <a href="{{ route('mitra.list') }}" class="nav-link">
                     <span class="sidebar-icon">
                         <img src="{{ asset('assets-admin/assets/img/icon-mitra.png') }}" height="23" width="23"
@@ -46,7 +46,7 @@
                     </span>
                     <span class="sidebar-text">Mitra</span>
                 </a>
-            </li>
+            </li> --}}
             {{-- Sidebar Data User --}}
             <li class="nav-item {{ request()->is('user*') ? 'active' : '' }}">
                 <a href="{{ route('user.list') }}" class="nav-link">
