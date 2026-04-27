@@ -11,7 +11,7 @@ class Galeri extends Model
     use HasFactory;
 
     protected $primaryKey = 'galeri_id';
-    protected $table = 'Galeri';
+    protected $table = 'galeri';
 
     protected $fillable = [
         'galeri',
