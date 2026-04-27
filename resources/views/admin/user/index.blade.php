@@ -56,8 +56,6 @@
                                 <option value="">Semua Role</option>
                                 <option value="SuperAdministrator" {{ request('role') == 'SuperAdministrator' ? 'selected' : '' }}>Super Administrator</option>
                                 <option value="Administrator" {{ request('role') == 'Administrator' ? 'selected' : '' }}>Administrator</option>
-                                <option value="Pelanggan" {{ request('role') == 'Pelanggan' ? 'selected' : '' }}>Pelanggan</option>
-                                <option value="Mitra" {{ request('role') == 'Mitra' ? 'selected' : '' }}>Mitra</option>
                             </select>
                         </div>
                         <div class="col-md-4">

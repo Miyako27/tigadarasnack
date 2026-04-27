@@ -43,7 +43,7 @@ class UserController extends Controller
             'name' => ['required', 'max:200'],
             'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'min:3'],
-            'role' => ['required', 'in:SuperAdministrator,Administrator,Pelanggan,Mitra'],
+            'role' => ['required', 'in:SuperAdministrator,Administrator'],
         ]);
 
         // Membuat array data
@@ -101,7 +101,7 @@ class UserController extends Controller
             'name' => ['required', 'max:200'],
             'email' => ['required', 'email', 'max:255'],
             'password' => ['nullable', 'min:8'],
-            'role' => ['required', 'in:SuperAdministrator,Administrator,Pelanggan,Mitra'],
+            'role' => ['required', 'in:SuperAdministrator,Administrator'],
         ]);
 
         $id = $request->id;

@@ -95,8 +95,7 @@
                             <option selected>Pilih Jenis Role</option>
                             <option value="SuperAdministrator">Super Administrator</option>
                             <option value="Administrator">Administrator</option>
-                            <option value="Pelanggan">Pelanggan</option>
-                            <option value="Mitra">Mitra</option>
+
                         </select>
                     </div>
 

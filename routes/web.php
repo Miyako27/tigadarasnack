@@ -4,16 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MitraController;
 use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UlasanController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\PelangganController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('home');
 });
 
 // resource gunanya mendeteksi get/post (auto deteksi)
@@ -35,34 +33,6 @@ Route::POST('/daftar/redirect', [DaftarController::class, 'daftar'])->name('daft
 Route::group(['middleware' => ['checkislogin']], function () {
     //P6 route ke dashboard
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    //route untuk PelangganController
-
-    //untuk menampilkan index pelangan
-    Route::get('pelanggan', [PelangganController::class, 'index'])->name('pelanggan.list');
-    //untuk menampilkan form data pelanggan
-    Route::get('pelanggan/create', [PelangganController::class, 'create'])->name('pelanggan.create');
-    //untuk mengirim data pelanggan ke PelangganController pakai dd
-    Route::POST('pelanggan/store', [PelangganController::class, 'store'])->name('pelanggan.store');
-
-    //pertemuan 7
-    Route::get('pelanggan/edit/{param1}', [PelangganController::class, 'edit'])->name('pelanggan.edit');
-    Route::post('pelanggan/update', [PelangganController::class, 'update'])->name('pelanggan.update');
-    Route::get('pelanggan/destroy/{param1}', [PelangganController::class, 'destroy'])->name('pelanggan.destroy');
-
-    //Tugas pertemuan 7 - Mitra
-    //route untuk PelangganController
-
-    //untuk menampilkan index pelangan
-    Route::get('mitra', [MitraController::class, 'index'])->name('mitra.list');
-    //untuk menampilkan form data pelanggan
-    Route::get('mitra/create', [MitraController::class, 'create'])->name('mitra.create');
-    //untuk mengirim data pelanggan ke PelangganController pakai dd
-    Route::POST('mitra/store', [MitraController::class, 'store'])->name('mitra.store');
-
-    Route::get('mitra/edit/{param1}', [MitraController::class, 'edit'])->name('mitra.edit');
-    Route::post('mitra/update', [MitraController::class, 'update'])->name('mitra.update');
-    Route::get('mitra/destroy/{param1}', [MitraController::class, 'destroy'])->name('mitra.destroy');
 
     //route untuk ProdukController
 
@@ -92,11 +62,11 @@ Route::group(['middleware' => ['checkislogin']], function () {
 
     //route untuk GaleriController
 
-    //untuk menampilkan index pelangan
+    //untuk menampilkan index galeri
     Route::get('galeri', [GaleriController::class, 'index'])->name('galeri.list');
-    //untuk menampilkan form data pelanggan
+    //untuk menampilkan form data galeri
     Route::get('galeri/create', [GaleriController::class, 'create'])->name('galeri.create');
-    //untuk mengirim data pelanggan ke PelangganController pakai dd
+    //untuk mengirim data galeri
     Route::POST('galeri/store', [GaleriController::class, 'store'])->name('galeri.store');
 
     //pertemuan 7
@@ -107,7 +77,7 @@ Route::group(['middleware' => ['checkislogin']], function () {
     //Logout
     Route::get('/login/logout', [LoginController::class, 'logout'])->name('login.logout');
 
-    Route::group(['middleware' => ['checkrole:SuperAdministrator']], function () {
+    Route::group(['middleware' => ['checkrole:SuperAdministrator,Administrator']], function () {
         //User
         Route::get('user', [UserController::class, 'index'])->name('user.list');
         Route::get('user/create', [UserController::class, 'create'])->name('user.create');

@@ -16,7 +16,7 @@
                         </a>
                     </li>
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Pelanggan</li>
+                    <li class="breadcrumb-item active" aria-current="page">Ulasan</li>
                 </ol>
             </nav>
             <h2 class="h4">Data Ulasan</h2>

@@ -6,6 +6,7 @@ use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\CreateSuperAdminUser;
+use Database\Seeders\CreateLindaUserSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,5 +16,6 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(CreateSuperAdminUser::class);
+        $this->call(CreateLindaUserSeeder::class);
     }
 }

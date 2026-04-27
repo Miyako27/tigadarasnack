@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
-class CreateSuperAdminUser extends Seeder
+class CreateLindaUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,12 +14,12 @@ class CreateSuperAdminUser extends Seeder
     public function run(): void
     {
         User::updateOrCreate([
-            'email' => 'miya@gmail.com',
+            'email' => 'linda23si@mahasiswa.pcr.ac.id',
         ], [
             'avatar' => 'icon-user.png',
-            'name' => 'Miyako',
-            'password' => Hash::make('123'),
-            'role' => 'SuperAdministrator',
+            'name' => 'Linda',
+            'password' => Hash::make('12345678'),
+            'role' => 'Administrator',
             'email_verified_at' => now(),
         ]);
     }

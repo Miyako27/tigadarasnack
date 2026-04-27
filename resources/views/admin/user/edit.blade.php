@@ -105,9 +105,6 @@
                             Super Administrator</option>
                         <option value="Administrator" {{ $dataUser->role == 'Administrator' ? 'selected' : '' }}>
                             Administrator</option>
-                        <option value="Pelanggan" {{ $dataUser->role == 'Pelanggan' ? 'selected' : '' }}>Pelanggan
-                        </option>
-                        <option value="Mitra" {{ $dataUser->role == 'Mitra' ? 'selected' : '' }}>Mitra</option>
                     </select>
                 </div>
                 <div class="mt-3">

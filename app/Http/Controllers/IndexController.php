@@ -5,16 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Galeri;
 use App\Models\Produk;
 use App\Models\Ulasan;
+use Illuminate\Support\Facades\Schema;
 
 class IndexController extends Controller
 {
     public function index()
     {
+        $produkQuery = Produk::query()->orderBy('created_at', 'desc');
 
-        $pageData['dataProduk'] = Produk::where('best_seller', 1)
-            ->orderBy('created_at', 'desc')
-            ->take(3)
-            ->get();
+        if (Schema::hasColumn('produk', 'best_seller')) {
+            $produkQuery->where('best_seller', 1);
+        }
+
+        $pageData['dataProduk'] = $produkQuery->take(3)->get();
         $pageData['produk'] = Produk::All();
         $pageData['dataUlasan'] = Ulasan::All();
 

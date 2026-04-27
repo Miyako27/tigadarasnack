@@ -51,15 +51,6 @@
             <div class="mb-3">
                 <form method="GET" action="{{ route('galeri.list') }}">
                     <div class="row">
-                        {{-- <div class="col-md-3">
-                            <select name="role" onchange="this.form.submit()" class="form-select">
-                                <option value="">Semua Role</option>
-                                <option value="SuperAdministrator" {{ request('role') == 'SuperAdministrator' ? 'selected' : '' }}>Super Administrator</option>
-                                <option value="Administrator" {{ request('role') == 'Administrator' ? 'selected' : '' }}>Administrator</option>
-                                <option value="Pelanggan" {{ request('role') == 'Pelanggan' ? 'selected' : '' }}>Pelanggan</option>
-                                <option value="Mitra" {{ request('role') == 'Mitra' ? 'selected' : '' }}>Mitra</option>
-                            </select>
-                        </div> --}}
                         <div class="col-md-4">
                             <!-- Input Pencarian -->
                             <div class="input-group">

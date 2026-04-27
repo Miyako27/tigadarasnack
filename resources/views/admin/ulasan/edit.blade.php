@@ -18,7 +18,7 @@
                 </li>
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('ulasan.list') }}">Ulasan</a></li>
-                <li class="breadcrumb-item active">Edit Data Pelanggan</li>
+                <li class="breadcrumb-item active">Edit Data Ulasan</li>
             </ol>
         </nav>
         <h2 class="h4">Edit Data Ulasan</h2>
