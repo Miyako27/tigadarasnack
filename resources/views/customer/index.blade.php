@@ -6,7 +6,7 @@
         <div id="header-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="assets/img/bg-1.png" alt="bg-1">
+                    <img class="w-100" src="assets/img/bg-1.jpeg" alt="bg-1">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3 caveat-heading">Tak Suka Buah dan Sayur? Kami Punya Solusinya!
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="assets/img/bg-2.png" alt="bg-2">
+                    <img class="w-100" src="assets/img/bg-2.jpeg" alt="bg-2">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3 caveat-heading">Keripik Sayur dan Buah</h4>
