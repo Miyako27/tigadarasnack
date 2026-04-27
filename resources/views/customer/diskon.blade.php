@@ -10,7 +10,7 @@
                         <img src="{{ asset('storage/produk/' . $item->foto_produk) }}" class="card-img-top" alt="{{ $item->nama_produk }}" style="object-fit: cover; height: 250px;">
                         <div class="card-body text-center">
                             <h5 class="card-title font-weight-bold">{{ $item->nama_produk }}</h5>
-                            <p class="card-text text-muted">Harga: Rp {{($item->harga_produk) }}</p>
+                            <p class="card-text text-muted">Harga: Rp {{ $item->harga_produk_rupiah }}</p>
                             <a href="https://wa.me/6285838546877" class="btn btn-secondary py-2 px-4 mt-2" style="font-size: 14px;">Pesan Sekarang</a>
                         </div>
                     </div>

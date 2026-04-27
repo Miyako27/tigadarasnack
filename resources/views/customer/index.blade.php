@@ -50,11 +50,11 @@
                 </div>
             </div>
             <div class="col-md-6 py-5 py-md-0 px-0">
-                <div class="h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                    <div class="d-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
-                        style="width: 100px; height: 100px;">
-                        <h3 class="font-weight-bold text-secondary mb-0">15K</h3>
-                    </div>
+                    <div class="h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                        <div class="d-flex align-items-center justify-content-center bg-white rounded-circle mb-4"
+                            style="width: 100px; height: 100px;">
+                        <h3 class="font-weight-bold text-secondary mb-0">Rp 15.000</h3>
+                        </div>
                     <h3 class="font-weight-bold text-white mt-3 mb-4">Keripik Sawi</h3>
                     <p class="text-white mb-4">Siapa sangka sawi bisa menjadi camilan favorit Anda?
                         Kami mengolah daun sawi segar menjadi keripik yang gurih, renyah,
@@ -122,7 +122,7 @@
                             <div
                                 class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3">
                                 <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-                                    <h4 class="font-weight-bold text-white mb-0">{{ $row->harga_produk }}</h4>
+                                    <h4 class="font-weight-bold text-white mb-0">Rp {{ $row->harga_produk_rupiah }}</h4>
                                 </div>
                                 <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3"
                                     style="width: 150px; height: 150px;">

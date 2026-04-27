@@ -4,6 +4,7 @@
     {{-- start main content --}}
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <div class="d-block mb-4 mb-md-0">
+            <h2 class="h4">Data Produk</h2>
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                     <li class="breadcrumb-item">
@@ -20,8 +21,7 @@
                     <li class="breadcrumb-item active" aria-current="page">Produk</li>
                 </ol>
             </nav>
-            <h2 class="h4">Data Produk</h2>
-            <p class="mb-0">List Data Produk C'3Daraaa</p>
+
         </div>
         <div class="btn-toolbar mb-2 mb-md-0">
             <a href="{{ route('produk.create') }}"
@@ -97,7 +97,7 @@
                                     <img src="{{ asset('storage/produk/' . $row->foto_produk) }}" alt="produk" width="50">
                                 </td>
                                 <td>{{ $row->nama_produk }}</td>
-                                <td>{{ $row->harga_produk }}</td>
+                                <td>Rp {{ $row->harga_produk_rupiah }}</td>
                                 <td>{{ $row->deskripsi_produk }}</td>
                                 <td>{{ $row->best_seller == 1 ? 'Ya' : 'Tidak' }}</td>
                                 <td>

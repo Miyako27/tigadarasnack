@@ -4,6 +4,7 @@
     {{-- Breadram --}}
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-4">
         <div class="d-block mb-4 mb-md-0">
+            <h2 class="h4">Data Produk</h2>
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                     <li class="breadcrumb-item">
@@ -21,8 +22,7 @@
                     <li class="breadcrumb-item active">Form Data Produk</li>
                 </ol>
             </nav>
-            <h2 class="h4">Data Produk</h2>
-            <p class="mb-0">Tambahkan Data Produk C'3Daraaa</p>
+
         </div>
         <div class="btn-toolbar mb-2 mb-md-0">
             <a href="{{ route('produk.list') }}" class="btn btn-sm btn-secondary text-white d-inline-flex align-items-center">
@@ -76,7 +76,7 @@
                     <div>
                         <label for="harga_produk">Harga Produk</label>
                         <input class="form-control" id="harga_produk" type="text" name="harga_produk"
-                            placeholder="Masukka Harga Produk">
+                            placeholder="Contoh: 15.000" value="{{ old('harga_produk') }}">
                     </div>
                 </div>
 

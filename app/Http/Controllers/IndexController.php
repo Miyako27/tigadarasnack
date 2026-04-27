@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Galeri;
 use App\Models\Produk;
 use App\Models\Ulasan;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Schema;
 
 class IndexController extends Controller
@@ -48,8 +50,22 @@ class IndexController extends Controller
 
     public function diskon()
     {
+        $diskonProduk = Produk::all()
+            ->filter(fn (Produk $produk) => $produk->harga_produk_number < 15000)
+            ->values();
 
-        $pageData['produk'] = Produk::where('harga_produk', '<', 15)->paginate(9);
+        $perPage = 9;
+        $currentPage = Paginator::resolveCurrentPage() ?: 1;
+        $currentItems = $diskonProduk->slice(($currentPage - 1) * $perPage, $perPage)->values();
+
+        $pageData['produk'] = new LengthAwarePaginator(
+            $currentItems,
+            $diskonProduk->count(),
+            $perPage,
+            $currentPage,
+            ['path' => request()->url(), 'query' => request()->query()]
+        );
+
         return view('customer.diskon', $pageData);
     }
 

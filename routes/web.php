@@ -8,6 +8,7 @@ use App\Http\Controllers\DaftarController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\UlasanController;
+use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
@@ -46,6 +47,16 @@ Route::group(['middleware' => ['checkislogin']], function () {
     Route::get('produk/edit/{param1}', [ProdukController::class, 'edit'])->name('produk.edit');
     Route::post('produk/update', [ProdukController::class, 'update'])->name('produk.update');
     Route::get('produk/destroy/{param1}', [ProdukController::class, 'destroy'])->name('produk.destroy');
+
+    //route untuk PemesananController
+    Route::get('pemesanan', [PemesananController::class, 'index'])->name('pemesanan.list');
+    Route::get('pemesanan/create', [PemesananController::class, 'create'])->name('pemesanan.create');
+    Route::post('pemesanan/store', [PemesananController::class, 'store'])->name('pemesanan.store');
+    Route::get('pemesanan/show/{param1}', [PemesananController::class, 'show'])->name('pemesanan.show');
+    Route::get('pemesanan/edit/{param1}', [PemesananController::class, 'edit'])->name('pemesanan.edit');
+    Route::post('pemesanan/update', [PemesananController::class, 'update'])->name('pemesanan.update');
+    Route::post('pemesanan/update-status/{param1}', [PemesananController::class, 'updateStatus'])->name('pemesanan.update-status');
+    Route::get('pemesanan/destroy/{param1}', [PemesananController::class, 'destroy'])->name('pemesanan.destroy');
 
     //route untuk UlasanController
 

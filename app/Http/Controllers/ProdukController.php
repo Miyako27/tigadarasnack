@@ -46,7 +46,7 @@ class ProdukController extends Controller
         // Membuat array data
         $data = [
             'nama_produk' => $request->nama_produk,
-            'harga_produk' => $request->harga_produk,
+            'harga_produk' => Produk::normalizeHarga($request->harga_produk),
             'deskripsi_produk' => $request->deskripsi_produk,
             'best_seller' => $request->has('best_seller') ? 1 : 0,
         ];
@@ -105,7 +105,7 @@ class ProdukController extends Controller
 
         // Update atribut produk
         $produk->nama_produk = $request->nama_produk;
-        $produk->harga_produk = $request->harga_produk;
+        $produk->harga_produk = Produk::normalizeHarga($request->harga_produk);
         $produk->deskripsi_produk = $request->deskripsi_produk;
         $produk->best_seller = $request->has('best_seller') ? 1 : 0;
 
