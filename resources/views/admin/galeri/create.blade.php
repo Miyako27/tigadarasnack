@@ -19,7 +19,7 @@
                     </li>
                     <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
                     <li class="breadcrumb-item"><a href="{{ route('galeri.list') }}">Galeri</a> </li>
-                    <li class="breadcrumb-item active">Kembali</li>
+                    <li class="breadcrumb-item active">Tambah Galeri</li>
                 </ol>
             </nav>
         </div>

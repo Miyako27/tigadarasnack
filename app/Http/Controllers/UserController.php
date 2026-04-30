@@ -19,7 +19,7 @@ class UserController extends Controller
             'email',
             'password'];
 
-        $pageData['dataUser'] = User::filter($request, $filterableColumns, $searchableColumns)->paginate(2)->withQueryString();
+        $pageData['dataUser'] = User::filter($request, $filterableColumns, $searchableColumns)->paginate(5)->withQueryString();
         return view('admin.user.index', $pageData);
     }
 

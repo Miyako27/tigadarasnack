@@ -4,7 +4,7 @@
     $initialTotal = old('total_harga_display', isset($dataPemesanan) ? $dataPemesanan->total_harga_rupiah : ($selectedProduk ? number_format($selectedProduk->harga_produk_number, 0, ',', '.') : '0'));
 @endphp
 
-<div class="row">
+<div class="row g-3">
     <div class="col-md-6 mb-3">
         <label for="tanggal_pesanan">Tanggal Pesanan</label>
         <input class="form-control" id="tanggal_pesanan" type="datetime-local" name="tanggal_pesanan"
@@ -36,13 +36,19 @@
         </select>
     </div>
 
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
         <label for="jumlah">Jumlah</label>
         <input class="form-control" id="jumlah" type="number" min="1" name="jumlah"
             value="{{ old('jumlah', $dataPemesanan->jumlah ?? 1) }}">
     </div>
 
-    <div class="col-md-4 mb-3">
+    <div class="col-md-6 mb-3">
+        <label for="total_harga_display">Total Harga</label>
+        <input class="form-control bg-light" id="total_harga_display" type="text" value="Rp {{ $initialTotal }}"
+            readonly>
+    </div>
+
+    <div class="col-md-6 mb-3">
         <label for="metode_pembayaran">Metode Pembayaran</label>
         <select class="form-select" id="metode_pembayaran" name="metode_pembayaran">
             <option value="">Pilih Metode</option>
@@ -53,12 +59,6 @@
                 </option>
             @endforeach
         </select>
-    </div>
-
-    <div class="col-md-8 mb-3">
-        <label for="total_harga_display">Total Harga</label>
-        <input class="form-control bg-light" id="total_harga_display" type="text" value="Rp {{ $initialTotal }}"
-            readonly>
     </div>
 
     <div class="col-md-6 mb-3">
